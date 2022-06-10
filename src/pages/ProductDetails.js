@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import products from "../products.json";
 import Product from "../components/Product";
 
-export default class ProductDetails extends Component {
-  render() {
+export default function ProductDetails(props) {
     const name = this.props.match.params.name;
     const toRender = products.filter((product) => product.name === name)[0];
     return (
@@ -21,7 +20,6 @@ export default class ProductDetails extends Component {
         </ProductsWrapper>
       </>
     );
-  }
 }
 
 const ProductsWrapper = styled.div`

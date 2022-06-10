@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import products from "../products.json";
 import Product from "../components/Product";
 
-export default class Products extends Component {
-  render() {
+export default function Products(props) {
     return (
       <ProductsWrapper>
         {products.map((product, index) => (
@@ -12,7 +11,6 @@ export default class Products extends Component {
         ))}
       </ProductsWrapper>
     );
-  }
 }
 
 const ProductsWrapper = styled.div`
